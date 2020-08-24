@@ -10,10 +10,10 @@ function changeValues(num, arr1, arr2, obj1, obj2){
   
   num = num * 10;             // no change
   
-  arr1.push(...[4,5,6])       //will cause change. internals accessed using address.
-  arr2 = arrTemp              //no change. just changes the local arr2 variable
+  arr1.push(...[4,5,6])       //will cause change in outer variable. internals accessed using address.
+  arr2 = arrTemp              //no change in outer variable. just changes the local arr2 variable
   
-  obj1.item = "changed";      //will cause change. internals accessed using address.
+  obj1.item = "changed";      //will cause change in outer variable. internals accessed using address.
   obj2 = {item: "changed"};   //no change. just changes the local obj2 variable
   
  }
